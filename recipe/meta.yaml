@@ -21,7 +21,6 @@ requirements:
     - python >=3.6
   run:
     - invoke
-    - enum34
     - python >=3.6
 
 test:
