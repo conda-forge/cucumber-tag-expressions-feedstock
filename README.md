@@ -3,7 +3,7 @@ About cucumber-tag-expressions-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/cucumber-tag-expressions-feedstock/blob/main/LICENSE.txt)
 
-Home: https://github.com/cucumber/tag-expressions-python
+Home: https://github.com/cucumber/tag-expressions
 
 Package license: MIT
 
