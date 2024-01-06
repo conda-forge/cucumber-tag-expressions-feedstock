@@ -1,5 +1,5 @@
 {% set name = "cucumber-tag-expressions" %}
-{% set version = "4.1.0" %}
+{% set version = "6.0.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/cucumber-tag-expressions-{{ version }}.tar.gz
-  sha256: e314d5fed6eebb2f90380271f562248fb15e18636764faf40f4dde4b28b1f960
+  sha256: 83a175e06449d7817c88446357ec3b6a336057c9e3264eb09db8449412d31d58
 
 build:
   noarch: python
@@ -32,7 +32,7 @@ test:
     - pip
 
 about:
-  home: https://github.com/cucumber/tag-expressions-python
+  home: https://github.com/cucumber/tag-expressions
   summary: Provides tag-expression parser for cucumber/behave
   license: MIT
   license_file: LICENSE
