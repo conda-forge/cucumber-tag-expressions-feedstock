@@ -1,5 +1,5 @@
 {% set name = "cucumber-tag-expressions" %}
-{% set version = "6.1.0" %}
+{% set version = "6.1.1" %}
 
 
 package:
@@ -7,8 +7,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/cucumber-tag-expressions-{{ version }}.tar.gz
-  sha256: 3758d312315efac8215865db1783748df5ef66324352068b32f845b7707fed5b
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: ec6bcf0957d8c6ea7b817d282b4e04243c0de087dda1e354505a5544937a574e
 
 build:
   noarch: python
@@ -19,8 +19,10 @@ requirements:
   host:
     - pip
     - python >=3.6
+    - setuptools
+    - setuptools_scm
+    - wheel
   run:
-    - invoke
     - python >=3.6
 
 test:
