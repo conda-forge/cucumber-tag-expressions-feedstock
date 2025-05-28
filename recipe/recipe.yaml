@@ -1,0 +1,45 @@
+schema_version: 1
+
+context:
+  name: cucumber-tag-expressions
+  version: 6.2.0
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name | replace('-', '_') }}-${{ version }}.tar.gz
+  sha256: b60aa2cdbf9ac43e28d9b0e4fd49edf9f09d5d941257d2912f5228f9d166c023
+
+build:
+  number: 0
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv
+
+requirements:
+  host:
+    - pip
+    - python ${{ python_min }}.*
+    - setuptools
+    - setuptools_scm
+    - wheel
+  run:
+    - python >=${{ python_min }}
+
+tests:
+  - python:
+      imports:
+        - cucumber_tag_expressions
+      pip_check: true
+      python_version: ${{ python_min }}.*
+  
+about:
+  summary: Provides tag-expression parser for cucumber/behave
+  license: MIT
+  license_file: LICENSE
+  homepage: https://github.com/cucumber/tag-expressions
+
+extra:
+  recipe-maintainers:
+    - thewchan
