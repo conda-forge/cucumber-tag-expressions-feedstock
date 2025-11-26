@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: cucumber-tag-expressions
-  version: "8.0.0"
+  version: "8.1.0"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name | replace('-', '_') }}-${{ version }}.tar.gz
-  sha256: 4af80282ff0349918c332428176089094019af6e2a381a2fd8f1c62a7a6bb7e8
+  sha256: acc56dd19b7bd0b931fc7b124ebbb6737def0775be41186ace7f5e566338ce7d
 
 build:
   number: 0
