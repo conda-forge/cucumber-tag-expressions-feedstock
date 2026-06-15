@@ -21,7 +21,7 @@ requirements:
   host:
     - pip
     - python ${{ python_min }}.*
-    - uv-build >=0.10.0,<0.11.0
+    - uv-build >=0.11.0,<0.12.0
   run:
     - python >=${{ python_min }}
 
@@ -30,7 +30,9 @@ tests:
       imports:
         - cucumber_tag_expressions
       pip_check: true
-      python_version: ${{ python_min }}.*
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
 
 about:
   summary: Provides tag-expression parser for cucumber/behave
